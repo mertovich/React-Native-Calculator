@@ -1,12 +1,11 @@
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 import React from 'react';
+import Screen from './components/Screen';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View>
-        <Text>App</Text>
-      </View>
+      <Screen />
     </SafeAreaView>
   );
 };
