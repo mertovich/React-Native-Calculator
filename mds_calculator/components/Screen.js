@@ -1,14 +1,14 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
-const Screen = () => {
+const Screen = props => {
   return (
     <View>
       <View style={styles.calculateContainer}>
-        <Text style={styles.calculateText}>Calculate Text</Text>
+        <Text style={styles.calculateText}>{props.Input}</Text>
       </View>
       <View style={styles.resultContainer}>
-        <Text style={styles.resultText}>Result Text</Text>
+        <Text style={styles.resultText}>{props.Result}</Text>
       </View>
     </View>
   );
