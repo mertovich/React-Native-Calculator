@@ -123,6 +123,19 @@ const App = () => {
       });
       setResult(result);
     }
+
+    if (tmp.includes('*')) {
+      tmpList = Input.split('*');
+      tmpList.forEach(element => {
+        if (tmpElement != undefined) {
+          result = result * parseFloat(element);
+        } else {
+          tmpElement = parseFloat(element);
+          result = tmpElement;
+        }
+      });
+      setResult(result);
+    }
   };
 
   return (
