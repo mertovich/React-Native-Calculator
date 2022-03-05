@@ -65,7 +65,6 @@ const App = () => {
     tmp = Input + '.';
     setInput(tmp);
   };
-
   const buttonPlus = () => {
     let tmp = Input;
     tmp = Input + '+';
@@ -90,11 +89,24 @@ const App = () => {
     let tmp = Input;
     let tmpList;
     let result = 0;
+    let tmpElement = undefined;
 
     if (tmp.includes('+')) {
       tmpList = Input.split('+');
       tmpList.forEach(element => {
         result += parseFloat(element);
+      });
+      setResult(result);
+    }
+    if (tmp.includes('-')) {
+      tmpList = Input.split('-');
+      tmpList.forEach(element => {
+        if (tmpElement != undefined) {
+          result = result - parseFloat(element);
+        } else {
+          tmpElement = parseFloat(element);
+          result = tmpElement;
+        }
       });
       setResult(result);
     }
